@@ -4,6 +4,12 @@ on: push
 jobs:
   molecule:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        scenario:
+            - centos-7
+            - debian-9
+            
     steps:
       - uses: actions/checkout@v2
         with:
