@@ -3,7 +3,7 @@ on: push
 
 jobs:
   molecule:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         scenario:
