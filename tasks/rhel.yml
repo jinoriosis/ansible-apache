@@ -1,5 +1,5 @@
 ---
 - name: install httpd
-  yum: 
+  yum:
     name: httpd
     state: present
