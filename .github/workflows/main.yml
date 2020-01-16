@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        image:
+        MOLECULE_DISTRO:
           - debian
           - centos
           - ubuntu
@@ -18,5 +18,5 @@ jobs:
       - name: molecule
         uses: robertdebock/molecule-action@1.1.1
         with:
-          image: ${{ matrix.image }}
+          image: ${{ matrix.MOLECULE_DISTRO}}
           options: "--parallel all"
