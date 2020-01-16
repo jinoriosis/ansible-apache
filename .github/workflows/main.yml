@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        scenario:
+        MOLECULE_DISTRO:
             - centos-7
             - debian-9
             
@@ -14,6 +14,10 @@ jobs:
       - uses: actions/checkout@v2
         with:
           path: "${{ github.repository }}"
-      - uses: gofrolist/molecule-action@master
-        
+      - name: molecule
+        uses: robertdebock/molecule-action@1.1.1
+        with:
+          image: ${{ matrix.MOLECULE_DISTRO }}
+          options: "--parallel all"
+
 
