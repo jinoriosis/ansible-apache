@@ -19,5 +19,3 @@ jobs:
         with:
           image: ${{ matrix.MOLECULE_DISTRO }}
           options: "--parallel all"
-
-
