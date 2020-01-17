@@ -11,6 +11,8 @@ jobs:
         uses: actions/checkout@v2.0.0
       - name: Setup Python environment
         uses: actions/setup-python@v1.1.1
+        with:
+          python-version: 3.5
       - name: Installing test dependency
         run: pip install molecule docker
       - name: Testing Role against ubuntu-1804
@@ -24,6 +26,8 @@ jobs:
         uses: actions/checkout@v2.0.0
       - name: Setup Python environment
         uses: actions/setup-python@v1.1.1
+        with:
+          python-version: 3.5
       - name: Installing test dependency
         run: pip install molecule docker
       - name: Testing Role against Centos-7
