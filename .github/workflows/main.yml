@@ -9,9 +9,9 @@ jobs:
         os: [centos, ubuntu-latest]
         include:
         - os: centos7
-          env : MOLECULE_DISTRO=centos7
+          MOLECULE_DISTRO: centos7
         - os: ubuntu-latest
-          env : MOLECULE_DISTRO=ubuntu
+          MOLECULE_DISTRO : ubuntu
           
             
     steps:
@@ -19,7 +19,5 @@ jobs:
         with:
           path: "${{ github.repository }}"
       - name: molecule
-        uses: robertdebock/molecule-action@1.1.1
-        with:
-          image: ${{ matrix.os}}
-          options: "--parallel all"
+      - run: echo ${{matrix.MOLECULE_DISTRO}}  
+        
