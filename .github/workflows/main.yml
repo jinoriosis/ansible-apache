@@ -11,5 +11,5 @@ jobs:
         uses: actions/checkout@v2.0.0
       - name: Run some commands
         run: |
-          echo $MOLECULE_DISTRO
+          pip install molecule docker
           which molecule
