@@ -1,19 +1,14 @@
-name: CI
-on: push
+name: checkMyrole
+on: [push]
 
 jobs:
-  molecule:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        os: [centos, ubuntu-latest]
-        include:
-        - os: centos7
-          MOLECULE_DISTRO: centos7
-        - os: ubuntu-latest
-          MOLECULE_DISTRO : ubuntu
-          
+  checkDebian:
+    runs-on: [ubuntu-18.04]
     steps:
-     - uses: actions/checkout@v1
-     - run: echo ${{matrix.MOLECULE_DISTRO}}
+      - name: checkout
+        uses: actions/checkout@v2.0.0
+      - name: Run some commands
+        run: |
+          ls
+          pwd
         
