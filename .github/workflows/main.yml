@@ -13,7 +13,7 @@ jobs:
         uses: actions/setup-python@v1.1.1
       - name: Installing test dependency
         run: pip install molecule docker
-      - name: Testing Role ${{ GITHUB_REPOSITORY }}
+      - name: Testing Role against ubuntu-1804
         run: molecule test
   checkCentos:
     runs-on: [ubuntu-18.04]
@@ -26,6 +26,6 @@ jobs:
         uses: actions/setup-python@v1.1.1
       - name: Installing test dependency
         run: pip install molecule docker
-      - name: Testing Role ${{ GITHUB_REPOSITORY }}
+      - name: Testing Role against Centos-7
         run: molecule test
 
