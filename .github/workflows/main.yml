@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: 3.5
       - name: Installing test dependency
-        run: pip install molecule docker
+        run: pip3 install molecule docker
       - name: Testing Role against ubuntu-1804
         run: molecule test
   checkCentos:
@@ -29,6 +29,6 @@ jobs:
         with:
           python-version: 3.5
       - name: Installing test dependency
-        run: pip install molecule docker
+        run: pip3 install molecule docker
       - name: Testing Role against Centos-7
         run: molecule test
