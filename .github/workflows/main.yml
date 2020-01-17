@@ -9,9 +9,9 @@ jobs:
         os: [centos, ubuntu-latest]
         include:
         - os: centos7
-          MOLECULE_DISTRO: centos7
+          env : MOLECULE_DISTRO=centos7
         - os: ubuntu-latest
-          MOLECULE_DISTRO: ubuntu1804
+          env : MOLECULE_DISTRO=ubuntu
           
             
     steps:
