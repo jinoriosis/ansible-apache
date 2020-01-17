@@ -28,4 +28,3 @@ jobs:
         run: pip install molecule docker
       - name: Testing Role against Centos-7
         run: molecule test
-
