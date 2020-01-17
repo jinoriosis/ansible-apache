@@ -13,11 +13,7 @@ jobs:
         - os: ubuntu-latest
           MOLECULE_DISTRO : ubuntu
           
-            
     steps:
-      - uses: actions/checkout@v2
-        with:
-          path: "${{ github.repository }}"
-      - name: molecule
-      - run: echo ${{matrix.MOLECULE_DISTRO}}  
+     - uses: actions/checkout@v1
+     - run: echo ${{matrix.MOLECULE_DISTRO}}
         
